@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.searchController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #FFFFE0;">
+         <children>
+            <Text layoutX="114.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заполните анкету">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Line endX="200.0" layoutX="150.0" layoutY="46.0" startX="-150.0" />
+            <Text layoutX="18.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="18.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="17.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="17.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Квалификация">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вид деятельности">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Иные данные">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Предполагаемая з/п">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameField" layoutX="187.0" layoutY="57.0" />
+            <TextField fx:id="lastnameField" layoutX="187.0" layoutY="90.0" />
+            <TextField fx:id="patrField" layoutX="187.0" layoutY="126.0" />
+            <TextField fx:id="qualFiald" layoutX="187.0" layoutY="163.0" />
+            <TextField fx:id="kindField" layoutX="187.0" layoutY="204.0" />
+            <TextField fx:id="salaryFeild" layoutX="187.0" layoutY="244.0" />
+            <TextArea fx:id="otherField" layoutX="136.0" layoutY="284.0" prefHeight="47.0" prefWidth="200.0" />
+            <JFXButton fx:id="sendBtn" layoutX="17.0" layoutY="345.0" onAction="#sendBtnClick" prefHeight="41.0" prefWidth="317.0" text="Отправить ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

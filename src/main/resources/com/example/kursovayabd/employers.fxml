@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.employersController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #FFFFE0;">
+         <children>
+            <Text layoutX="114.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заполните анкету">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Line endX="223.0" layoutX="127.0" layoutY="48.0" startX="-127.0" />
+            <Text layoutX="17.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="17.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вид деятельности">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameField" layoutX="186.0" layoutY="60.0" />
+            <TextField fx:id="kindField" layoutX="186.0" layoutY="93.0" />
+            <TextField fx:id="adressField" layoutX="186.0" layoutY="129.0" />
+            <TextField fx:id="numberField" layoutX="186.0" layoutY="166.0" />
+            <JFXButton fx:id="sendBtn" layoutX="17.0" layoutY="345.0" onAction="#sendBtnClick" prefHeight="41.0" prefWidth="317.0" text="Отправить ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

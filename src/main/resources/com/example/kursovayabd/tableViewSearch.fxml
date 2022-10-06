@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #d2e0f8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.tableViewSearchController">
+   <children>
+      <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APPLICANT" wrappingWidth="105.43505859375">
+         <font>
+            <Font name="Roboto Medium" size="18.0" />
+         </font>
+      </Text>
+      <MFXTableView fx:id="mfxTableView" layoutX="14.0" layoutY="123.0" prefHeight="363.0" prefWidth="876.0">
+         <effect>
+            <DropShadow height="6.35" offsetY="5.0" radius="11.467500000000001" width="41.52">
+               <color>
+                  <Color opacity="0.2977099120616913" />
+               </color>
+            </DropShadow>
+         </effect></MFXTableView>
+      <MFXButton fx:id="deliteBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="304.0" layoutY="47.0" onAction="#deliteBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Delete">
+         <font>
+            <Font name="Roboto" size="18.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="refreshBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="158.0" layoutY="47.0" onAction="#refreshBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Refresh">
+         <font>
+            <Font name="Roboto" size="18.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="addBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="14.0" layoutY="47.0" onAction="#addBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Add">
+         <font>
+            <Font name="Roboto" size="18.0" />
+         </font>
+      </MFXButton>
+   </children>
+</AnchorPane>
