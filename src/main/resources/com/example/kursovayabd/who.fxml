@@ -5,17 +5,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.whoController">
    <children>
-      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FFFFE0;">
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #d2e0f8;">
          <children>
-            <JFXButton fx:id="searchBtn" layoutX="14.0" layoutY="11.0" onAction="#searchBtnClick" prefHeight="128.0" prefWidth="168.0" text="Соискатель">
+            <JFXButton fx:id="searchBtn" layoutX="14.0" layoutY="11.0" onAction="#searchBtnClick" prefHeight="128.0" prefWidth="111.0" text="Соискатель">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="workBnt" layoutX="218.0" layoutY="11.0" onAction="#workBntClick" prefHeight="128.0" prefWidth="168.0" text="Работодатель">
+            <JFXButton fx:id="workBnt" layoutX="275.0" layoutY="11.0" onAction="#workBntClick" prefHeight="128.0" prefWidth="111.0" text="Работодатель">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="dealsBtn" layoutX="145.0" layoutY="11.0" onAction="#dealsBtnClick" prefHeight="128.0" prefWidth="111.0" text="Сделки">
                <font>
                   <Font size="14.0" />
                </font>

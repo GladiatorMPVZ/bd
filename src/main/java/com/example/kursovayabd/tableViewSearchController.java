@@ -1,9 +1,19 @@
 package com.example.kursovayabd;
 
 import db.DbConnect;
-import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXTableColumn;
 import io.github.palexdev.materialfx.controls.MFXTableView;
+import io.github.palexdev.materialfx.controls.cell.MFXTableRowCell;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import people.Applicant;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,37 +27,9 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import io.github.palexdev.materialfx.controls.cell.MFXTableRowCell;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import people.Applicant;
-
 public class tableViewSearchController implements Initializable {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private MFXButton addBtn;
-
-    @FXML
-    private MFXButton deliteBtn;
-
     @FXML
     private MFXTableView<Applicant> mfxTableView;
-
-    @FXML
-    private MFXButton refreshBtn;
 
     String queryS = null;
     Connection connectionS = null;
@@ -74,7 +56,7 @@ public class tableViewSearchController implements Initializable {
 
     @FXML
     void deliteBtnClick(ActionEvent event) throws SQLException {
-        queryS = "DELETE FROM `applicant` WHERE id =" + String.valueOf(keys());
+        queryS = "DELETE FROM `applicant` WHERE id =" + keys();
         System.out.println(queryS);
         connectionS  = DbConnect.getConnect();
         preparedStatementS = connectionS.prepareStatement(queryS);
@@ -82,13 +64,12 @@ public class tableViewSearchController implements Initializable {
         refreshBtnClick();
     }
 
-    private Object keys() {
+    private Integer keys() {
         map = mfxTableView.getSelectionModel().getSelection();
         for (Map.Entry entry : map.entrySet()) {
-            if (entry.getValue().equals("people.**")) {
-                System.out.println(entry);
-                return entry.getKey();
-            }
+            applicant = (Applicant) entry.getValue();
+            System.out.println(applicant.getId());
+            return applicant.getId();
         }
         return null;
     }

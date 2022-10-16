@@ -24,12 +24,17 @@
             <Font name="Century Gothic" size="18.0" />
          </font>
       </Text>
-      <JFXButton fx:id="singInBtn" layoutX="305.0" layoutY="7.0" onAction="#singInBtnClick" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: #98FB98;" text="Sign in">
+      <JFXButton fx:id="singInBtn" layoutX="304.0" layoutY="94.0" onAction="#singInBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="Sign in">
          <font>
             <Font name="Century Gothic" size="17.0" />
          </font>
       </JFXButton>
       <MFXPasswordField fx:id="passField" floatMode="ABOVE" layoutX="122.0" layoutY="94.0" prefHeight="36.0" prefWidth="173.0" />
       <MFXTextField fx:id="loginField" floatMode="ABOVE" layoutX="122.0" layoutY="48.0" prefHeight="36.0" prefWidth="173.0" />
+      <JFXButton fx:id="regBtn" layoutX="304.0" layoutY="7.0" onAction="#regBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="Sign up">
+         <font>
+            <Font name="Century Gothic" size="17.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

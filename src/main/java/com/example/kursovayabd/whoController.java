@@ -44,4 +44,13 @@ public class whoController {
         stage.show();
     }
 
+    @FXML
+    void dealsBtnClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("tableViewDeals.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
 }

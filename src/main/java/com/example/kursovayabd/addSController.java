@@ -7,6 +7,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,11 +52,7 @@ public class addSController implements Initializable {
 
     String query = null;
     Connection connection = null;
-    ResultSet resultSet = null;
     PreparedStatement preparedStatement;
-    Applicant applicant = null;
-    private boolean update;
-    int studentId;
 
     @FXML
     void resetBtnClick() {
@@ -69,7 +66,7 @@ public class addSController implements Initializable {
     }
 
     @FXML
-    void saveBtnClick(ActionEvent event) {
+    void saveBtnClick(ActionEvent event) throws SQLException {
         connection = DbConnect.getConnect();
         String name = nameSField.getText();
         String lastname = sernameSField.getText();
@@ -90,8 +87,14 @@ public class addSController implements Initializable {
         }
     }
 
-    private void insert() {
-
+    private void insert() throws SQLException {
+        query = "INSERT applicant (lastname, firstname, patronymic, qualification, kindOfActivity, other, salary) VALUE " +
+                "('" + nameSField.getText() + "', '" + sernameSField.getText() + "', '" + patSField.getText() + "', '" + qualSField.getText()
+                + "', '" + kindSField.getText() + "', '" + otherSField.getText() + "', " + Integer.parseInt(salarySField.getText()) + ");";
+        System.out.println(query);
+        connection = DbConnect.getConnect();
+        preparedStatement = connection.prepareStatement(query);
+        preparedStatement.execute();
     }
 
     @Override
