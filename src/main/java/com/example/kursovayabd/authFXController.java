@@ -39,21 +39,19 @@ public class authFXController {
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
-            alert.setContentText("Check LOGIN or PASS");
+            alert.setContentText("Сheck your LOGIN or PASSWORD or you do not have ACCESS");
             alert.showAndWait();
         }
     }
 
     public boolean checkUser() throws SQLException {
         connection = DbConnect.getConnect();
-        try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT 1 FROM users where login=? and password=?")) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT 1 FROM users where login=? and password=? and role < 2")) {
             preparedStatement.setString(1, loginField.getText());
             preparedStatement.setString(2, passField.getText());
             try (ResultSet rs = preparedStatement.executeQuery()) {
                 if (rs.next()) {
                     check = true;
-                } else {
-                    check = false;
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

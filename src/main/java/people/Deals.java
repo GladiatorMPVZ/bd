@@ -1,5 +1,8 @@
 package people;
 
+import lombok.Data;
+
+@Data
 public class Deals {
     int employersId, applicantId, commission;
     String post;
@@ -11,35 +14,35 @@ public class Deals {
         this.post = post;
     }
 
-    public int getEmployersId() {
-        return employersId;
-    }
-
-    public void setEmployersId(int employersId) {
-        this.employersId = employersId;
-    }
-
-    public int getApplicantId() {
-        return applicantId;
-    }
-
-    public void setApplicantId(int applicantId) {
-        this.applicantId = applicantId;
-    }
-
-    public int getCommission() {
-        return commission;
-    }
-
-    public void setCommission(int commission) {
-        this.commission = commission;
-    }
-
-    public String getPost() {
-        return post;
-    }
-
-    public void setPost(String post) {
-        this.post = post;
-    }
+   // public int getEmployersId() {
+   //     return employersId;
+   // }
+//
+   // public void setEmployersId(int employersId) {
+   //     this.employersId = employersId;
+   // }
+//
+   // public int getApplicantId() {
+   //     return applicantId;
+   // }
+//
+   // public void setApplicantId(int applicantId) {
+   //     this.applicantId = applicantId;
+   // }
+//
+   // public int getCommission() {
+   //     return commission;
+   // }
+//
+   // public void setCommission(int commission) {
+   //     this.commission = commission;
+   // }
+//
+   // public String getPost() {
+   //     return post;
+   // }
+//
+   // public void setPost(String post) {
+   //     this.post = post;
+   // }
 }

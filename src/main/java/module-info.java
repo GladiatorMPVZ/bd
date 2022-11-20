@@ -4,6 +4,7 @@ module com.example.kursovayabd {
     requires com.jfoenix;
     requires java.sql;
     requires MaterialFX;
+    requires lombok;
 
     opens people;
     opens com.example.kursovayabd to javafx.fxml;
