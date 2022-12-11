@@ -8,42 +8,42 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="350.0" style="-fx-background-color: #d2e0f8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.addSController">
    <children>
-      <Text layoutX="15.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE PROFILE">
+      <Text layoutX="15.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДОБАВИТЬ РАБОТНИКА">
          <font>
             <Font name="Roboto Medium" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="11.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME">
+      <Text fill="#0d0d0d" layoutX="11.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИМЯ">
          <font>
             <Font name="Roboto" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="11.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LASTNAME">
+      <Text fill="#0d0d0d" layoutX="11.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФАМИЛИЯ">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="12.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PATRONYMIC">
+      <Text fill="#0d0d0d" layoutX="12.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ОТЧЕСТВО">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="12.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUALIFICATION">
+      <Text fill="#0d0d0d" layoutX="12.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КВАЛИФИКАЦИЯ">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="13.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KIND OF ACTIVITY">
+      <Text fill="#0d0d0d" layoutX="13.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ВИД ДЕЯТ.">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="13.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OTHER">
+      <Text fill="#0d0d0d" layoutX="13.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДРУГОЕ">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="11.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALARY">
+      <Text fill="#0d0d0d" layoutX="11.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="З/П">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
@@ -55,12 +55,12 @@
       <MFXTextField fx:id="qualSField" floatMode="ABOVE" layoutX="169.0" layoutY="183.0" prefHeight="29.0" prefWidth="167.0" />
       <MFXTextField fx:id="otherSField" floatMode="ABOVE" layoutX="171.0" layoutY="258.0" prefHeight="29.0" prefWidth="167.0" />
       <MFXTextField fx:id="salarySField" floatMode="ABOVE" layoutX="171.0" layoutY="294.0" prefHeight="29.0" prefWidth="167.0" />
-      <MFXButton fx:id="saveBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="28.0" layoutY="356.0" onAction="#saveBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Save">
+      <MFXButton fx:id="saveBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="28.0" layoutY="356.0" onAction="#saveBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="ДОБАВИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>
       </MFXButton>
-      <MFXButton fx:id="resetBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="191.0" layoutY="356.0" onAction="#resetBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Reset">
+      <MFXButton fx:id="resetBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="191.0" layoutY="356.0" onAction="#resetBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="СБРОСИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>

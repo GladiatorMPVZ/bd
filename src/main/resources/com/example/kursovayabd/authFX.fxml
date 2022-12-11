@@ -9,29 +9,24 @@
 
 <AnchorPane prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.authFXController">
    <children>
-      <Text layoutX="172.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In">
+      <Text layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЛОГИН">
          <font>
             <Font name="Century Gothic" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+      <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПАРОЛЬ">
          <font>
             <Font name="Century Gothic" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
-         <font>
-            <Font name="Century Gothic" size="18.0" />
-         </font>
-      </Text>
-      <JFXButton fx:id="singInBtn" layoutX="304.0" layoutY="94.0" onAction="#singInBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="Sign in">
+      <JFXButton fx:id="singInBtn" layoutX="304.0" layoutY="94.0" onAction="#singInBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="ВОЙТИ">
          <font>
             <Font name="Century Gothic" size="17.0" />
          </font>
       </JFXButton>
       <MFXPasswordField fx:id="passField" floatMode="ABOVE" layoutX="122.0" layoutY="94.0" prefHeight="36.0" prefWidth="173.0" />
       <MFXTextField fx:id="loginField" floatMode="ABOVE" layoutX="122.0" layoutY="48.0" prefHeight="36.0" prefWidth="173.0" />
-      <JFXButton fx:id="regBtn" layoutX="304.0" layoutY="7.0" onAction="#regBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="Sign up">
+      <JFXButton fx:id="regBtn" layoutX="304.0" layoutY="7.0" onAction="#regBtnClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #98FB98;" text="РЕГ.">
          <font>
             <Font name="Century Gothic" size="17.0" />
          </font>

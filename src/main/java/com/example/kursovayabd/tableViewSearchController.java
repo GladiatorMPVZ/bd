@@ -4,6 +4,8 @@ import db.DbConnect;
 import io.github.palexdev.materialfx.controls.MFXTableColumn;
 import io.github.palexdev.materialfx.controls.MFXTableView;
 import io.github.palexdev.materialfx.controls.cell.MFXTableRowCell;
+import io.github.palexdev.materialfx.filter.IntegerFilter;
+import io.github.palexdev.materialfx.filter.StringFilter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -111,13 +113,13 @@ public class tableViewSearchController implements Initializable {
         refreshBtnClick();
 
         MFXTableColumn<Applicant> idColumn = new MFXTableColumn<>("id", true, Comparator.comparing(Applicant::getId));
-        MFXTableColumn<Applicant> lastnameColumn = new MFXTableColumn<>("lastname", true, Comparator.comparing(Applicant::getLastname));
-        MFXTableColumn<Applicant> firstnameColumn = new MFXTableColumn<>("firstname", true, Comparator.comparing(Applicant::getFirstname));
-        MFXTableColumn<Applicant> patronymicColumn = new MFXTableColumn<>("patronymic", true, Comparator.comparing(Applicant::getPatronymic));
-        MFXTableColumn<Applicant> qualificationColumn = new MFXTableColumn<>("qualification", true, Comparator.comparing(Applicant::getQualification));
-        MFXTableColumn<Applicant> kindOfActivityColumn = new MFXTableColumn<>("kindOfActivity", true, Comparator.comparing(Applicant::getKindOfActivity));
-        MFXTableColumn<Applicant> otherColumn = new MFXTableColumn<>("other", true, Comparator.comparing(Applicant::getOther));
-        MFXTableColumn<Applicant> salaryColumn = new MFXTableColumn<>("salary", true, Comparator.comparing(Applicant::getSalary));
+        MFXTableColumn<Applicant> lastnameColumn = new MFXTableColumn<>("Имя", true, Comparator.comparing(Applicant::getLastname));
+        MFXTableColumn<Applicant> firstnameColumn = new MFXTableColumn<>("Фамилия", true, Comparator.comparing(Applicant::getFirstname));
+        MFXTableColumn<Applicant> patronymicColumn = new MFXTableColumn<>("Отчество", true, Comparator.comparing(Applicant::getPatronymic));
+        MFXTableColumn<Applicant> qualificationColumn = new MFXTableColumn<>("Квалификация", true, Comparator.comparing(Applicant::getQualification));
+        MFXTableColumn<Applicant> kindOfActivityColumn = new MFXTableColumn<>("Вид деятельности", true, Comparator.comparing(Applicant::getKindOfActivity));
+        MFXTableColumn<Applicant> otherColumn = new MFXTableColumn<>("Другое", true, Comparator.comparing(Applicant::getOther));
+        MFXTableColumn<Applicant> salaryColumn = new MFXTableColumn<>("З/П", true, Comparator.comparing(Applicant::getSalary));
 
         idColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Applicant::getId));
         lastnameColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Applicant::getLastname));
@@ -130,18 +132,17 @@ public class tableViewSearchController implements Initializable {
         mfxTableView.setItems(SearchList);
         mfxTableView.getTableColumns().addAll(idColumn, lastnameColumn, firstnameColumn, patronymicColumn, qualificationColumn, kindOfActivityColumn,
                 otherColumn, salaryColumn);
-
         mfxTableView.setItems(SearchList);
-        // mfxTableView.getFilters().addAll(
-                //         new IntegerFilter<>("id", Applicant::getId),
-        //         new StringFilter<>("lastname", Applicant::getLastname),
-        //         new StringFilter<>("firstname", Applicant::getFirstname),
-        //         new StringFilter<>("patronymic", Applicant::getPatronymic),
-        //         new StringFilter<>("qualification", Applicant::getQualification),
-        //         new StringFilter<>("kindOfActivity", Applicant::getKindOfActivity),
-        //         new StringFilter<>("other", Applicant::getOther),
-        //         new IntegerFilter<>("salary", Applicant::getSalary)
-                // );
+         mfxTableView.getFilters().addAll(
+                         new IntegerFilter<>("id", Applicant::getId),
+                 new StringFilter<>("Имя", Applicant::getLastname),
+                 new StringFilter<>("Фамилия", Applicant::getFirstname),
+                 new StringFilter<>("Отчество", Applicant::getPatronymic),
+                 new StringFilter<>("Квалификация", Applicant::getQualification),
+                 new StringFilter<>("Вид деятельности", Applicant::getKindOfActivity),
+                 new StringFilter<>("Другое", Applicant::getOther),
+                 new IntegerFilter<>("З/П", Applicant::getSalary)
+                 );
 
     }
 

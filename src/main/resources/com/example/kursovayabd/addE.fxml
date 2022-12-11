@@ -8,27 +8,27 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="350.0" style="-fx-background-color: #d2e0f8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.addEController">
    <children>
-      <Text layoutX="15.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYER PROFILE">
+      <Text layoutX="15.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДОБАВИТЬ РАБОТОДАТЕЛЯ">
          <font>
             <Font name="Roboto Medium" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITLE">
+      <Text fill="#0d0d0d" layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НАЗВАНИЕ">
          <font>
             <Font name="Roboto" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="15.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADRESS">
+      <Text fill="#0d0d0d" layoutX="15.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="АДРЕС">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="11.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NUMBER">
+      <Text fill="#0d0d0d" layoutX="11.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НОМЕР">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
       </Text>
-      <Text fill="#0d0d0d" layoutX="15.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KIND OF ACTIVITY">
+      <Text fill="#0d0d0d" layoutX="15.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ВИД ДЕЯТ.">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font>
@@ -37,12 +37,12 @@
       <MFXTextField fx:id="kindEField" floatMode="ABOVE" layoutX="169.0" layoutY="109.0" prefHeight="29.0" prefWidth="167.0" />
       <MFXTextField fx:id="adressField" floatMode="ABOVE" layoutX="169.0" layoutY="144.0" prefHeight="29.0" prefWidth="167.0" />
       <MFXTextField fx:id="numberField" floatMode="ABOVE" layoutX="169.0" layoutY="183.0" prefHeight="29.0" prefWidth="167.0" />
-      <MFXButton fx:id="saveEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="28.0" layoutY="356.0" onAction="#saveEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Save">
+      <MFXButton fx:id="saveEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="28.0" layoutY="356.0" onAction="#saveEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="ДОБАВИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>
       </MFXButton>
-      <MFXButton fx:id="resetEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="191.0" layoutY="356.0" onAction="#resetEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Reset">
+      <MFXButton fx:id="resetEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="191.0" layoutY="356.0" onAction="#resetEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="СБРОСИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>

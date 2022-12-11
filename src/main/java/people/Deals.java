@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class Deals {
-    int employersId, applicantId, commission;
-    String post;
+    int commission;
+    String post, employersId, applicantId;
 
-    public Deals(int employersId, int applicantId, String post, int commission) {
+    public Deals(String employersId, String applicantId, String post, int commission) {
         this.employersId = employersId;
         this.applicantId = applicantId;
         this.commission = commission;

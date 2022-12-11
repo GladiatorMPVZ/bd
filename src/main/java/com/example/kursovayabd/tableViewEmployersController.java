@@ -5,6 +5,8 @@ import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXTableColumn;
 import io.github.palexdev.materialfx.controls.MFXTableView;
 import io.github.palexdev.materialfx.controls.cell.MFXTableRowCell;
+import io.github.palexdev.materialfx.filter.IntegerFilter;
+import io.github.palexdev.materialfx.filter.StringFilter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import people.Applicant;
 import people.Emploers;
 
 import java.io.IOException;
@@ -112,10 +115,10 @@ public class tableViewEmployersController implements Initializable {
         refreshEBtnClick();
 
         MFXTableColumn<Emploers> idColumn = new MFXTableColumn<>("id", true, Comparator.comparing(Emploers::getId));
-        MFXTableColumn<Emploers> titleColumn = new MFXTableColumn<>("title", true, Comparator.comparing(Emploers::getTitle));
-        MFXTableColumn<Emploers> kindOfActivityColumn = new MFXTableColumn<>("kindEmp", true, Comparator.comparing(Emploers::getKindEmp));
-        MFXTableColumn<Emploers> adressColumn = new MFXTableColumn<>("adress", true, Comparator.comparing(Emploers::getAdress));
-        MFXTableColumn<Emploers> numberColumn = new MFXTableColumn<>("number", true, Comparator.comparing(Emploers::getNumber));
+        MFXTableColumn<Emploers> titleColumn = new MFXTableColumn<>("Название", true, Comparator.comparing(Emploers::getTitle));
+        MFXTableColumn<Emploers> kindOfActivityColumn = new MFXTableColumn<>("Вид деятельности", true, Comparator.comparing(Emploers::getKindEmp));
+        MFXTableColumn<Emploers> adressColumn = new MFXTableColumn<>("Адрес", true, Comparator.comparing(Emploers::getAdress));
+        MFXTableColumn<Emploers> numberColumn = new MFXTableColumn<>("Номер", true, Comparator.comparing(Emploers::getNumber));
 
         idColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Emploers::getId));
         titleColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Emploers::getTitle));
@@ -125,6 +128,13 @@ public class tableViewEmployersController implements Initializable {
         mfxTableView.setItems(SearchList);
         mfxTableView.getTableColumns().addAll(idColumn, titleColumn, kindOfActivityColumn, adressColumn, numberColumn);
         mfxTableView.setItems(SearchList);
+        mfxTableView.getFilters().addAll(
+                new IntegerFilter<>("id", Emploers::getId),
+                new StringFilter<>("Название", Emploers::getTitle),
+                new StringFilter<>("Вид деятельности", Emploers::getKindEmp),
+                new StringFilter<>("Адрес", Emploers::getAdress),
+                new StringFilter<>("Номер", Emploers::getNumber)
+        );
     }
 
     @FXML

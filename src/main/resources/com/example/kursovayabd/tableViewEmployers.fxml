@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #d2e0f8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursovayabd.tableViewEmployersController">
    <children>
-      <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYER" wrappingWidth="105.43505859375">
+      <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="РАБОТОДАТЕЛИ" wrappingWidth="147.43505859375">
          <font>
             <Font name="Roboto Medium" size="18.0" />
          </font>
@@ -24,17 +24,17 @@
             </DropShadow>
          </effect>
       </MFXTableView>
-      <MFXButton fx:id="deliteEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="304.0" layoutY="47.0" onAction="#deliteEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Delete">
+      <MFXButton fx:id="deliteEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="304.0" layoutY="47.0" onAction="#deliteEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="УДАЛИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>
       </MFXButton>
-      <MFXButton fx:id="refreshEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="158.0" layoutY="47.0" onAction="#refreshEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Refresh">
+      <MFXButton fx:id="refreshEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="158.0" layoutY="47.0" onAction="#refreshEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="ОБНОВИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>
       </MFXButton>
-      <MFXButton fx:id="addEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="14.0" layoutY="47.0" onAction="#addEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Add">
+      <MFXButton fx:id="addEBtn" buttonType="RAISED" depthLevel="LEVEL3" depthTest="DISABLE" layoutX="14.0" layoutY="47.0" onAction="#addEBtnClick" prefHeight="52.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="ДОБАВИТЬ">
          <font>
             <Font name="Roboto" size="18.0" />
          </font>

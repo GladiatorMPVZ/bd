@@ -49,8 +49,8 @@ public class tableViewDealsController implements Initializable {
 
             while (resultSetS.next()) {
                 SearchList.add(new Deals(
-                        resultSetS.getInt("employersId"),
-                        resultSetS.getInt("applicantId"),
+                        resultSetS.getString("employersId"),
+                        resultSetS.getString("applicantId"),
                         resultSetS.getString("post"),
                         resultSetS.getInt("commission")));
                 mfxTableView.setItems(SearchList);
@@ -76,10 +76,10 @@ public class tableViewDealsController implements Initializable {
         callableStatement.execute();
         refreshDealsBtnClick();
 
-        MFXTableColumn<Deals> employersIdColumn = new MFXTableColumn<>("employersId", true, Comparator.comparing(Deals::getEmployersId));
-        MFXTableColumn<Deals> applicantIdColumn = new MFXTableColumn<>("applicantId", true, Comparator.comparing(Deals::getApplicantId));
-        MFXTableColumn<Deals> postColumn = new MFXTableColumn<>("post", true, Comparator.comparing(Deals::getPost));
-        MFXTableColumn<Deals> commissionColumn = new MFXTableColumn<>("commission", true, Comparator.comparing(Deals::getCommission));
+        MFXTableColumn<Deals> employersIdColumn = new MFXTableColumn<>("Работодатель", true, Comparator.comparing(Deals::getEmployersId));
+        MFXTableColumn<Deals> applicantIdColumn = new MFXTableColumn<>("Соискатель", true, Comparator.comparing(Deals::getApplicantId));
+        MFXTableColumn<Deals> postColumn = new MFXTableColumn<>("Должность", true, Comparator.comparing(Deals::getPost));
+        MFXTableColumn<Deals> commissionColumn = new MFXTableColumn<>("Комиссия", true, Comparator.comparing(Deals::getCommission));
 
         employersIdColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Deals::getEmployersId));
         applicantIdColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Deals::getApplicantId));
